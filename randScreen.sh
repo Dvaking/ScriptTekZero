@@ -14,7 +14,7 @@ do
   elif [random_number === 3]
     echo "3"
     xrandr inverted
-  else
+  elif [random_number === 4]
     echo "4"
     xrandr normal
   fi
