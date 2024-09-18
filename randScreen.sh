@@ -1,9 +1,5 @@
 
 session=$XDG_SESSION_TYPE
-folder=$(mktemp -d)
-
-curl https://raw.githubusercontent.com/Dvaking/ScriptTekZero/main/gnome-randr.py -o $folder/gnome-randr.py
-
 
 if [ "$session" == "x11" ]; then
     while true
@@ -25,6 +21,9 @@ if [ "$session" == "x11" ]; then
         sleep 30s
     done
 fi
+folder=$(mktemp -d)
+
+curl https://raw.githubusercontent.com/Dvaking/ScriptTekZero/main/gnome-randr.py -o $folder/gnome-randr.py
 while true
 do
     random_number=$((1 + RANDOM % 4))
